@@ -10,18 +10,11 @@ import {ICurrentWeather} from '../icurrent-weather';
 export class CurrentWeatherComponent implements OnInit {
   current: ICurrentWeather;
 
-  constructor(private weatherService: WeatherService) { 
-    this.current = {
-      city: 'Redmond',
-      country: 'US',
-      date: new Date(),
-      image: '',
-      temperature: 85,
-      description: 'sunny'
-    }
+  constructor(private weatherService: WeatherService) {
   }
 
   ngOnInit(): void {
+    this.weatherService.getCurrentWeather("Bothell", "US").subscribe(data => this.current = data);
   }
 
 }
