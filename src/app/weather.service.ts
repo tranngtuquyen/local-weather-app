@@ -35,8 +35,10 @@ export class WeatherService {
   getCurrentWeather(search: string|number, country?: string) : Observable<ICurrentWeather> {
     let uriParams = '';
     if (typeof search === "string") {
+      console.log(`City ${search}`)
       uriParams = `q=${search}`;
     } else {
+      console.log(`Zip ${search}`);
       uriParams = `zip=${search}`;
     }
     if (country) {
