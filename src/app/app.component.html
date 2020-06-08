@@ -1,6 +1,15 @@
 <div style="text-align: center">
   <mat-toolbar color="primary">Local Weather</mat-toolbar>
   <div>Your city, your forecast, right now!</div>
-  <h2>Current weather</h2>
-  <app-current-weather></app-current-weather>
+  <app-city-search></app-city-search>
+  <div fxLayout="row" fxLayoutAlign="space-around center">
+    <div fvFlex></div>
+    <div>
+      <mat-card style="width: 300px; margin: 20px auto;">
+        <h2>Current weather</h2>
+        <app-current-weather></app-current-weather>
+      </mat-card>
+    </div>
+    <div fvFlex></div>
+  </div>
 </div>
